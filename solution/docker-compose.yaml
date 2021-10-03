@@ -1,0 +1,11 @@
+version: '3'
+services:
+  csvserver:
+    image: "infracloudio/csvserver:latest"
+    container_name: csvserver_container
+    ports:
+      - 9393:9300
+    volumes:
+      - /home/ubuntu/csvserver/solution/inputFile:/csvserver/inputdata
+    environment:
+     - CSVSERVER_BORDER=Orange
